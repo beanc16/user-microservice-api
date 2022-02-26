@@ -59,6 +59,13 @@ app.post("/register", function(req, res)
     validateRegisterUserPayload(req.body)
     .then(function (payload)
     {
+        // TODO: Get app from app microservice
+        /*
+         * TODO:
+         * 1. Get app from app microservice
+         * 2. insertOne user with app information using UserController
+         * 3. Send success response with message: `Successfully created a user (named req.body.username || with email of req.body.email)`
+         */
         Success.json({
             res,
             message: "Validation succeeded!",
