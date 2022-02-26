@@ -5,6 +5,7 @@ const {
     dataObj,
 } = require("@beanc16/joi-helpers");
 const userSchemas = require("./helpers");
+const { basicAppSchema } = require("../apps");
 
 
 
@@ -28,7 +29,7 @@ const registerUserSchema = JoiRequired.object({
 .or("username", "email");   // Require username OR email
 
 const registerSchema = JoiRequired.object({
-    app: JoiRequired.object(),  // An object with no requirements
+    app: basicAppSchema,
     user: registerUserSchema,
 });
 
