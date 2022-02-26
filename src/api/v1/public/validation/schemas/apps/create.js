@@ -8,11 +8,9 @@ const { passwordStrengthsArray } = require("../users/helpers");
 
 
 const createAppSchema = JoiRequired.object({
-    app: JoiRequired.object({
-        data: {
-            passwordStrength: JoiRequired.string().valid(...passwordStrengthsArray),
-        }
-    }),
+    data: {
+        passwordStrength: JoiRequired.string().valid(...passwordStrengthsArray),
+    },
 });
 
 
