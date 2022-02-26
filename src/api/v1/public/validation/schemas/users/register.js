@@ -16,25 +16,22 @@ const { basicAppSchema } = require("../apps");
 
 // Register user
 const registerUserSchema = JoiRequired.object({
-    envs: envsArrayRequired,
-    email: userSchemas.emailString,
-    username: userSchemas.usernameString,
-    password: userSchemas.passwordStrengthMap.none.required,
-    legalName: userSchemas.nameObj,
-    chosenName: userSchemas.nameObj,
-    nickname: userSchemas.nicknameString,
-    pictureUrl: userSchemas.pictureUrlString,
-    data: dataObj,
-})
-.or("username", "email");   // Require username OR email
-
-const registerSchema = JoiRequired.object({
     app: basicAppSchema,
-    user: registerUserSchema,
+    user: JoiRequired.object({
+        envs: envsArrayRequired,
+        email: userSchemas.emailString,
+        username: userSchemas.usernameString,
+        password: userSchemas.passwordStrengthMap.none.required,
+        legalName: userSchemas.nameObj,
+        chosenName: userSchemas.nameObj,
+        nickname: userSchemas.nicknameString,
+        pictureUrl: userSchemas.pictureUrlString,
+        data: dataObj,
+    }).or("username", "email"),   // Require username OR email
 });
 
 
 
 module.exports = {
-    registerSchema,
+    registerUserSchema,
 };
