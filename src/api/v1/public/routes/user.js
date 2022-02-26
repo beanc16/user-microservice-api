@@ -29,6 +29,7 @@ const {
     ValidationError,
     BadRequest,
     InternalServerError,
+    NotImplemented,
 } = require("dotnet-responses");
 
 
@@ -39,9 +40,11 @@ const {
  * GETS *
  ********/
 
+/*
 app.get("/", function(req, res)
 {
 });
+*/
 
 
 
@@ -79,9 +82,11 @@ app.post("/register", function(req, res)
  * PATCHES *
  ***********/
 
+/*
 app.patch("/", function(req, res)
 {
 });
+*/
 
 
 
@@ -91,9 +96,11 @@ app.patch("/", function(req, res)
  * DELETES *
  ***********/
 
+/*
 app.delete("/", function(req, res)
 {
 });
+*/
 
 
 
