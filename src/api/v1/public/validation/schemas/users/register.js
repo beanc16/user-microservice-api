@@ -19,18 +19,8 @@ const registerUserSchema = JoiRequired.object({
     email: userSchemas.emailString,
     username: userSchemas.usernameString,
     password: userSchemas.passwordStrengthMap.none.required,
-    /*
-    legalName: {
-        first: "",
-        middle: "",
-        last: ""
-    },
-    chosenName: {
-        first: "",
-        middle: "",
-        last: ""
-    },
-    */
+    legalName: userSchemas.nameObj,
+    chosenName: userSchemas.nameObj,
     nickname: userSchemas.nicknameString,
     pictureUrl: userSchemas.pictureUrlString,
     data: dataObj,
