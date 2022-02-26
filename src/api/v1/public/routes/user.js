@@ -63,8 +63,9 @@ app.post("/register", function(req, res)
         /*
          * TODO:
          * 1. Get app from app microservice
-         * 2. insertOne user with app information using UserController
-         * 3. Send success response with message: `Successfully created a user (named req.body.username || with email of req.body.email)`
+         * 2. HASH USER PASSWORD WITH BCRYPT (see Stryde)
+         * 3. insertOne user with app information using UserController
+         * 4. Send success response with message: `Successfully created a user (named req.body.username || with email of req.body.email)`
          */
         Success.json({
             res,
