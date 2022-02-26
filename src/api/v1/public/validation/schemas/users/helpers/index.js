@@ -1,11 +1,12 @@
 const emailStrings = require("./emailString");
 const usernameStrings = require("./usernameString");
-const passwordStrengthMap = require("./passwords");
+const passwordHelpers = require("./passwords");
 
 
 
 module.exports = {
     ...emailStrings,
     ...usernameStrings,
-    passwordStrengthMap,
+    passwordStrengthMap: passwordHelpers.passwordStrengthMap,
+    passwordStrengthsArray: passwordHelpers.passwordStrengthsArray,
 };
