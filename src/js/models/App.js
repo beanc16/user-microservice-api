@@ -6,11 +6,7 @@ class App
     })
     {
         this.env = (env) ? env : process.env.STAGE;
-
-        if (searchName)
-        {
-            this.searchName = searchName;
-        }
+        this.searchName = searchName;
     }
 }
 
