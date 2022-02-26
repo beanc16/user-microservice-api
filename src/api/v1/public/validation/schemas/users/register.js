@@ -16,8 +16,8 @@ const userSchemas = require("./helpers");
 // Register user
 const registerUserSchema = JoiRequired.object({
     envs: envsArrayRequired,
-    email: userSchemas.emailStringRequired,
-    username: userSchemas.usernameStringRequired,
+    email: userSchemas.emailString,
+    username: userSchemas.usernameString,
     password: userSchemas.passwordStrengthMap.none.required,
     /*
     legalName: {
@@ -30,8 +30,8 @@ const registerUserSchema = JoiRequired.object({
         middle: "",
         last: ""
     },
-    nickname: "",
     */
+    nickname: userSchemas.nicknameString,
     pictureUrl: userSchemas.pictureUrlString,
     data: dataObj,
 })
