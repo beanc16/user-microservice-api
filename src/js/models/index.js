@@ -1,7 +1,7 @@
-//const myModel = require("./myModel");
+const User = require("./User");
 
 
 
 module.exports = {
-    //myModel,
+    User,
 };
