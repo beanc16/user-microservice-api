@@ -1,6 +1,6 @@
-# template-microservice-api
+# user-microservice-api
 
-A node server template for microservices to be hosted on Heroku.
+A node server for storing data about users, hosted on Heroku.
 
 <!--
 API Documentation:
@@ -8,4 +8,4 @@ API Documentation:
 -->
 
 Back-End Code (Node.js & MongoDb):
-https://github.com/beanc16/template-microservice
+https://github.com/beanc16/user-microservice-api
