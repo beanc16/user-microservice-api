@@ -1,6 +1,6 @@
 {
   "name": "user-microservice",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A microservice for storing data about users",
   "main": "index.js",
   "scripts": {
