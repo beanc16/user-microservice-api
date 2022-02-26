@@ -8,7 +8,7 @@ const _usernameRegex = /^[\w\-.]+$/;
 const usernameString = Joi.string()
                           .pattern(_usernameRegex)
                           .min(3)
-                          .max(100);
+                          .max(24);
 const usernameStringRequired = usernameString.required();
 
 
