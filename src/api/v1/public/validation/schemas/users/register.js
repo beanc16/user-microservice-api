@@ -1,15 +1,23 @@
 const Joi = require("joi");
-const { JoiRequired } = require("@beanc16/joi-helpers");
+const {
+    JoiRequired,
+    envsArrayRequired,
+    dataObj,
+} = require("@beanc16/joi-helpers");
 const userSchemas = require("./helpers");
 
 
 
+/*
+ * TODO:
+ * - Require email OR username
+ */
+
 // Register user
 const registerUserSchema = JoiRequired.object({
-    envs: userSchemas.envsArrayRequired,
-    searchName: userSchemas.searchNameStringRequired,
-    displayName: userSchemas.displayNameStringRequired,
-    data: userSchemas.dataObj,
+    envs: envsArrayRequired,
+    data: dataObj,
+    email: userSchemas.emailStringRequired,
 });
 
 

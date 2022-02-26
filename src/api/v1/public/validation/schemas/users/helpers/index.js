@@ -1,17 +1,7 @@
-/*
-const ids = require("./id");
-const envStrings = require("./envString");
-const envsArray = require("./envsArray");
-const dataObjs = require("./dataObj");
-*/
+const emailStrings = require("./emailString");
 
 
 
 module.exports = {
-    /*
-    ...ids,
-    ...envStrings,
-    ...envsArray,
-    ...dataObjs,
-    */
+    ...emailStrings,
 };
