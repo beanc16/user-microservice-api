@@ -2,7 +2,6 @@ const Joi = require("joi");
 const {
     JoiRequired,
 } = require("@beanc16/joi-helpers");
-const userSchemas = require("./helpers");
 const { passwordStrengthsArray } = require("../users/helpers");
 
 
