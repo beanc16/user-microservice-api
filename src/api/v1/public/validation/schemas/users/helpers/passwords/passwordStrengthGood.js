@@ -16,17 +16,17 @@ const {
  * - A number
  * - A special character
  */
-const passwordStringStrengthFair = Joi.string()
+const passwordStringStrengthGood = Joi.string()
                                       .min(8)
                                       .regex(lowercase.regex, lowercase.name)
                                       .regex(uppercase.regex, uppercase.name)
                                       .regex(number.regex, number.name)
                                       .regex(specialCharacter.regex, specialCharacter.name);
-const passwordStringStrengthFairRequired = passwordStringStrengthFair.required();
+const passwordStringStrengthGoodRequired = passwordStringStrengthGood.required();
 
 
 
 module.exports = {
-    passwordStringStrengthFair,
-    passwordStringStrengthFairRequired,
+    passwordStringStrengthGood,
+    passwordStringStrengthGoodRequired,
 };
