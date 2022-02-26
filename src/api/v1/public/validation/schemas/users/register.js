@@ -10,7 +10,6 @@ const userSchemas = require("./helpers");
 
 /*
  * TODO:
- * - Require email OR username
  * - Get password strength level via GET request to app microservice, then add it to the schema with passwordStrengthMap
  */
 
@@ -32,10 +31,11 @@ const registerUserSchema = JoiRequired.object({
         last: ""
     },
     nickname: "",
-    pictureUrl: "",
     */
+    pictureUrl: userSchemas.pictureUrlString,
     data: dataObj,
-});
+})
+.or("username", "email");   // Require username OR email
 
 const registerSchema = JoiRequired.object({
     // TODO: App
