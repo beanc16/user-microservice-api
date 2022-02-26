@@ -38,8 +38,7 @@ const registerUserSchema = JoiRequired.object({
 .or("username", "email");   // Require username OR email
 
 const registerSchema = JoiRequired.object({
-    // TODO: App
-    app: JoiRequired.object(),
+    app: JoiRequired.object(),  // An object with no requirements
     user: registerUserSchema,
 });
 
