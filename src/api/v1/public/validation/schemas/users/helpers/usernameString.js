@@ -6,9 +6,9 @@ const Joi = require("joi");
 const _usernameRegex = /^[\w\-.]+$/;
 
 const usernameString = Joi.string()
-                             .pattern(_usernameRegex)
-                             .min(3)
-                             .max(100);
+                          .pattern(_usernameRegex)
+                          .min(3)
+                          .max(100);
 const usernameStringRequired = usernameString.required();
 
 
