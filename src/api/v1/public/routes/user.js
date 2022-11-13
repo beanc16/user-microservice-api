@@ -68,6 +68,8 @@ app.get("/", function(req, res)
  * POSTS *
  *********/
 
+// TODO: Login endpoint
+
 app.post("/register", function(req, res)
 {
     validateRegisterUserPayload(req.body)
@@ -194,6 +196,8 @@ function _sendUserRegisterError(res, err, user)
  * PATCHES *
  ***********/
 
+// TODO: Update user info endpoint
+
 /*
 app.patch("/", function(req, res)
 {
@@ -207,6 +211,8 @@ app.patch("/", function(req, res)
 /***********
  * DELETES *
  ***********/
+
+// TODO: Delete user endpoint
 
 /*
 app.delete("/", function(req, res)
