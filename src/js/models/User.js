@@ -8,8 +8,13 @@ class User
         _id,
         app,
         envs,
-        searchName,
-        displayName,
+        email,
+        username,
+        password,
+        legalName,
+        chosenName,
+        nickname,
+        pictureUrl,
         data,
     })
     {
@@ -24,8 +29,39 @@ class User
         }
 
         this.envs = (envs) ? envs : [process.env.STAGE];
-        this.searchName = searchName;
-        this.displayName = displayName;
+
+        if (email)
+        {
+            this.email = email;
+        }
+
+        if (username)
+        {
+            this.username = username;
+        }
+
+        this.password = password;
+
+        if (legalName)
+        {
+            this.legalName = legalName;
+        }
+
+        if (chosenName)
+        {
+            this.chosenName = chosenName;
+        }
+
+        if (nickname)
+        {
+            this.nickname = nickname;
+        }
+
+        if (pictureUrl)
+        {
+            this.pictureUrl = pictureUrl;
+        }
+
         this.data = (data) ? data : {};
     }
 }
