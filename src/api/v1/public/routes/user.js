@@ -54,6 +54,8 @@ const {
  * GETS *
  ********/
 
+// TODO: Get user info (minus sensitive info like password) endpoint
+
 /*
 app.get("/", function(req, res)
 {
@@ -69,6 +71,8 @@ app.get("/", function(req, res)
  *********/
 
 // TODO: Login endpoint
+
+// TODO: Logout endpoint
 
 app.post("/register", function(req, res)
 {
