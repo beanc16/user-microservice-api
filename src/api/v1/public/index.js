@@ -18,7 +18,7 @@ const app = express();
 const { authEndpoints, pingEndpoints, userEndpoints } = require("./routes");
 app.use(`/ping`, pingEndpoints);
 app.use(`/auth`, authEndpoints);
-app.use(`/users`, userEndpoints);
+// app.use(`/users`, userEndpoints); // TODO: Remove this later
 
 
 
