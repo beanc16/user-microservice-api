@@ -2,6 +2,9 @@
  * REQUIRES *
  ************/
 
+// JWT
+const { authenticateTokenServiceToService } = require("@beanc16/jwt-helpers");
+
 // Routing
 const express = require("express");
 const app = express();
@@ -19,6 +22,14 @@ const { Success } = require("dotnet-responses");
  ********/
 
 app.get("/", function(req, res)
+{
+    Success.json({
+        res,
+        message: "Pong",
+    });
+});
+
+app.get("/authenticated", authenticateTokenServiceToService, function(req, res)
 {
     Success.json({
         res,

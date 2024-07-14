@@ -15,8 +15,9 @@ const app = express();
  *******************/
 
 // Endpoints
-const { pingEndpoints, userEndpoints } = require("./routes");
+const { authEndpoints, pingEndpoints, userEndpoints } = require("./routes");
 app.use(`/ping`, pingEndpoints);
+app.use(`/auth`, authEndpoints);
 app.use(`/users`, userEndpoints);
 
 
