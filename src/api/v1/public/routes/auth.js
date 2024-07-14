@@ -60,7 +60,8 @@ app.post("/simple", function(req, res)
     validateSimpleAuthPayload(req.body)
     .then(function (payload)
     {
-        const token = getAccessToken(payload);
+        const { calledBy, expiresInSeconds } = payload;
+        const token = getAccessToken({ calledBy }, expiresInSeconds);
         Success.json({
             res,
             data: {
