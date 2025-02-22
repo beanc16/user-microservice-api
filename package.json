@@ -4,10 +4,8 @@
   "description": "A microservice for storing data about users",
   "main": "index.js",
   "scripts": {
-    "vercel-build": "cp .npmrc $HOME/.npmrc && npm install",
     "start:dev": "node index.js",
-    "start": "nodemon index.js",
-    "preinstall": "echo 'Running preinstall'; ls -la && cat .npmrc || echo '.npmrc not found'"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "@beanc16/joi-helpers": "^0.4.0",
