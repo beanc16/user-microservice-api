@@ -31,7 +31,7 @@ jobs:
       run: npm install -g vercel@latest
     - name: Install Dependencies
       run: npm install
-      env: 
+      env:
         # This is necessary to pull in private packages hosted on the GitHub Packages registry.
         GITHUB_PRIVATE_PACKAGES_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_ACCESS_TOKEN }}
     - name: Build
