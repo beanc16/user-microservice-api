@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "node index.js",
     "start": "nodemon index.js",
-    "postinstall": "cat ~/.npmrc"
+    "preinstall": "cat ~/.npmrc"
   },
   "dependencies": {
     "@beanc16/joi-helpers": "^0.4.0",
