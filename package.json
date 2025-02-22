@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "node index.js",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "preinstall": "echo 'Running preinstall'; ls -la && cat .npmrc || echo '.npmrc not found'"
   },
   "dependencies": {
     "@beanc16/joi-helpers": "^0.4.0",
