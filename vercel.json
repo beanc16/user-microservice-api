@@ -12,5 +12,10 @@
     "routes": [{
         "src": "/(.*)",
         "dest": "/"
-    }]
+    }],
+    "git": {
+        "deploymentEnabled": {
+            "master": false
+        }
+    }
 }
