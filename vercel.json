@@ -5,7 +5,7 @@
         "use": "@vercel/node",
         "config": {
             "env": {
-                "NPM_CONFIG_USERCONFIG": "/vercel/.npmrc"
+                "NPM_CONFIG_USERCONFIG": "../.npmrc"
             }
         }
     }],
